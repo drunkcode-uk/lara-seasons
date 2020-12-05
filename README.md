@@ -1,11 +1,11 @@
-# Very short description of the package
+# Lara-Seasons
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/drunkcode/lara-seasons.svg?style=flat-square)](https://packagist.org/packages/drunkcode/lara-seasons)
 [![Build Status](https://img.shields.io/travis/drunkcode/lara-seasons/master.svg?style=flat-square)](https://travis-ci.org/drunkcode/lara-seasons)
 [![Quality Score](https://img.shields.io/scrutinizer/g/drunkcode/lara-seasons.svg?style=flat-square)](https://scrutinizer-ci.com/g/drunkcode/lara-seasons)
 [![Total Downloads](https://img.shields.io/packagist/dt/drunkcode/lara-seasons.svg?style=flat-square)](https://packagist.org/packages/drunkcode/lara-seasons)
 
-This is where your description should go. Try and limit it to a paragraph or two, and maybe throw in a mention of what PSRs you support to avoid any confusion with users and contributors.
+Add a seasonal flair to your webpages!
 
 ## Installation
 
@@ -17,13 +17,16 @@ composer require drunkcode/lara-seasons
 
 ## Usage
 
-``` php
-// Usage description here
+Add the Lara-Seasons include below the body of your layout blade file(s)
+
+```php
+// app.blade.php
+@include('lara-seasons::seasons')
 ```
 
 ### Testing
 
-``` bash
+```bash
 composer test
 ```
 
@@ -41,13 +44,9 @@ If you discover any security related issues, please email rayblair06@hotmail.com
 
 ## Credits
 
-- [Ray Blair](https://github.com/drunkcode)
-- [All Contributors](../../contributors)
+-   [Ray Blair](https://github.com/rayblair06)
+-   [All Contributors](../../contributors)
 
 ## License
 
 The MIT License (MIT). Please see [License File](LICENSE.md) for more information.
-
-## Laravel Package Boilerplate
-
-This package was generated using the [Laravel Package Boilerplate](https://laravelpackageboilerplate.com).

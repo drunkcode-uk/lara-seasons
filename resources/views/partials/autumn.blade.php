@@ -2,7 +2,7 @@
 <style>
     /* customizable leaf styling */
     .leaf {
-        color: #f7f749;
+        color: #d67418;
         font-size: 1em;
         font-family: Arial;
         text-shadow: 0 0 1px #000;
@@ -12,33 +12,33 @@
 </style>
 <div class="leafs" aria-hidden="true">
     <div class="leaf">
-        <i class="fa fa-sun-o" aria-hidden="true"></i>
+        <i class="fa fa-leaf" aria-hidden="true"></i>
     </div>
     <div class="leaf">
-        <i class="fa fa-sun-o" aria-hidden="true"></i>
+        <i class="fa fa-leaf" aria-hidden="true"></i>
     </div>
     <div class="leaf">
-        <i class="fa fa-sun-o" aria-hidden="true"></i>
+        <i class="fa fa-leaf" aria-hidden="true"></i>
     </div>
     <div class="leaf">
-        <i class="fa fa-sun-o" aria-hidden="true"></i>
+        <i class="fa fa-leaf" aria-hidden="true"></i>
     </div>
     <div class="leaf">
-        <i class="fa fa-sun-o" aria-hidden="true"></i>
+        <i class="fa fa-leaf" aria-hidden="true"></i>
     </div>
     <div class="leaf">
-        <i class="fa fa-sun-o" aria-hidden="true"></i>
+        <i class="fa fa-leaf" aria-hidden="true"></i>
     </div>
     <div class="leaf">
-        <i class="fa fa-sun-o" aria-hidden="true"></i>
+        <i class="fa fa-leaf" aria-hidden="true"></i>
     </div>
     <div class="leaf">
-        <i class="fa fa-sun-o" aria-hidden="true"></i>
+        <i class="fa fa-leaf" aria-hidden="true"></i>
     </div>
     <div class="leaf">
-        <i class="fa fa-sun-o" aria-hidden="true"></i>
+        <i class="fa fa-leaf" aria-hidden="true"></i>
     </div>
     <div class="leaf">
-        <i class="fa fa-sun-o" aria-hidden="true"></i>
+        <i class="fa fa-leaf" aria-hidden="true"></i>
     </div>
 </div>

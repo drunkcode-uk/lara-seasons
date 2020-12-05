@@ -40,6 +40,16 @@ class LaraSeasons
     }
 
     /**
+     * Return whether our Spring season is active or not
+     *
+     * @return boolean
+     */
+    public function isSpring()
+    {
+        return $this->seasons['spring']['active'];
+    }
+
+    /**
      * Return whether our Summer season is active or not
      *
      * @return boolean
@@ -47,6 +57,16 @@ class LaraSeasons
     public function isSummer()
     {
         return $this->seasons['summer']['active'];
+    }
+
+    /**
+     * Return whether our Autumn season is active or not
+     *
+     * @return boolean
+     */
+    public function isAutumn()
+    {
+        return $this->seasons['autumn']['active'];
     }
 
     /**
