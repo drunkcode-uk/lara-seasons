@@ -14,35 +14,14 @@ class LaraSeasonsServiceProvider extends ServiceProvider
     public function boot()
     {
         /*
-         * Optional methods to load your package assets
+         * Load package assets
          */
-        // $this->loadTranslationsFrom(__DIR__.'/../resources/lang', 'lara-seasons');
         $this->loadViewsFrom(__DIR__.'/../resources/views', 'lara-seasons');
-        // $this->loadMigrationsFrom(__DIR__.'/../database/migrations');
-        // $this->loadRoutesFrom(__DIR__.'/routes.php');
 
         if ($this->app->runningInConsole()) {
             $this->publishes([
                 __DIR__.'/../config/config.php' => config_path('lara-seasons.php'),
             ], 'config');
-
-            // Publishing the views.
-            /*$this->publishes([
-                __DIR__.'/../resources/views' => resource_path('views/vendor/lara-seasons'),
-            ], 'views');*/
-
-            // Publishing assets.
-            /*$this->publishes([
-                __DIR__.'/../resources/assets' => public_path('vendor/lara-seasons'),
-            ], 'assets');*/
-
-            // Publishing the translation files.
-            /*$this->publishes([
-                __DIR__.'/../resources/lang' => resource_path('lang/vendor/lara-seasons'),
-            ], 'lang');*/
-
-            // Registering package commands.
-            // $this->commands([]);
         }
     }
 
@@ -55,8 +34,8 @@ class LaraSeasonsServiceProvider extends ServiceProvider
         $this->mergeConfigFrom(__DIR__.'/../config/config.php', 'lara-seasons');
 
         // Register the main class to use with the facade
-        $this->app->singleton('lara-seasons', function () {
-            return new LaraSeasons(now());
+        $this->app->singleton(LaraSeasons::class, function ($app) {
+            return new LaraSeasons($app['config']->get('lara-seasons.seasons'), now());
         });
     }
 }

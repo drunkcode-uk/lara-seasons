@@ -13,9 +13,9 @@ class LaraSeasons
      */
     private $seasons;
 
-    public function __construct(Carbon $date)
+    public function __construct(array $config, Carbon $date)
     {
-        $this->seasons = config('lara-seasons.seasons');
+        $this->seasons = $config;
         $this->activateSeasons($date);
     }
 
