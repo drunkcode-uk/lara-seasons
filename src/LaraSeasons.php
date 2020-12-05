@@ -8,23 +8,14 @@ class LaraSeasons
 {
     /**
      * Our Seasons Config
-     *
-     * Winter Season - Between 1st December to 31st December
-     *
+     *     *
      * @var boolean
      */
-    private $seasons = [
-        'winter' => [
-            'active' => false,
-            'between' => [
-                '1st December',
-                '31st December',
-            ]
-        ]
-    ];
+    private $seasons;
 
     public function __construct(Carbon $date)
     {
+        $this->seasons = config('lara-seasons.seasons');
         $this->activateSeasons($date);
     }
 
@@ -46,6 +37,16 @@ class LaraSeasons
                 $this->seasons[$season]['active'] = true;
             }
         }
+    }
+
+    /**
+     * Return whether our Summer season is active or not
+     *
+     * @return boolean
+     */
+    public function isSummer()
+    {
+        return $this->seasons['summer']['active'];
     }
 
     /**
