@@ -2,6 +2,8 @@
 
 namespace Drunkcode\LaraSeasons;
 
+use Carbon\Carbon;
+use Drunkcode\LaraSeasons\LaraSeasons;
 use Illuminate\Support\ServiceProvider;
 
 class LaraSeasonsServiceProvider extends ServiceProvider
@@ -15,7 +17,7 @@ class LaraSeasonsServiceProvider extends ServiceProvider
          * Optional methods to load your package assets
          */
         // $this->loadTranslationsFrom(__DIR__.'/../resources/lang', 'lara-seasons');
-        // $this->loadViewsFrom(__DIR__.'/../resources/views', 'lara-seasons');
+        $this->loadViewsFrom(__DIR__.'/../resources/views', 'lara-seasons');
         // $this->loadMigrationsFrom(__DIR__.'/../database/migrations');
         // $this->loadRoutesFrom(__DIR__.'/routes.php');
 
@@ -54,7 +56,7 @@ class LaraSeasonsServiceProvider extends ServiceProvider
 
         // Register the main class to use with the facade
         $this->app->singleton('lara-seasons', function () {
-            return new LaraSeasons;
+            return new LaraSeasons(now());
         });
     }
 }
